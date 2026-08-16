@@ -3,114 +3,99 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AegisVault AI - Square Grid Dashboard</title>
+  <title>AegisVault AI - Interactive Dashboard</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* smooth animation effect */
+    .dashboard-card { transition: all 0.3s ease; }
+    .dashboard-card:hover { transform: scale(1.05); border-color: #a855f7; }
+  </style>
 </head>
-<body class="bg-[#0b0314] text-white min-h-screen p-3 font-sans">
+<body class="bg-[#0b0314] text-white min-h-screen p-4">
 
   <!-- Header -->
-  <header class="mb-4 flex justify-between items-center bg-[#150727] p-3 rounded-lg border border-purple-900/50">
-    <div>
-      <h1 class="text-base font-bold text-purple-300">AegisVault AI Dashboard</h1>
-      <p class="text-purple-400 text-[10px]">Security Control Center</p>
-    </div>
-    <span class="bg-green-900/40 text-green-400 text-[10px] px-2 py-1 rounded border border-green-700/50">● Active</span>
+  <header class="mb-4 bg-[#150727] p-4 rounded-xl border border-purple-900 shadow-xl">
+    <h1 class="text-lg font-bold text-purple-300">AegisVault AI Dashboard</h1>
+    <p class="text-[10px] text-purple-500">Click any box to manage settings</p>
   </header>
 
-  <!-- Perfect Square Box Grid (aspect-square keeps them perfect squares) -->
-  <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+  <!-- Interactive Grid -->
+  <div class="grid grid-cols-2 gap-4">
     
-    <!-- Square Box 1 -->
-    <div class="aspect-square bg-[#18092e] border border-purple-800/60 p-3 rounded-xl flex flex-col justify-between shadow-lg">
-      <h3 class="text-[11px] font-bold text-purple-300 border-b border-purple-900/80 pb-1">BIOMETRIC</h3>
-      <div class="space-y-1 text-[9px]">
-        <div class="bg-[#0d041a] p-1 rounded text-green-400 font-semibold">● Face ID</div>
-        <div class="bg-[#0d041a] p-1 rounded text-green-400 font-semibold">● Touch ID</div>
-      </div>
-      <span class="text-[9px] text-gray-400">Status: Locked</span>
-    </div>
+    <!-- 1. BIOMETRIC -->
+    <a href="#" onclick="alert('Opening Biometric Settings...')" class="dashboard-card aspect-square bg-[#18092e] border border-purple-800 p-3 rounded-2xl flex flex-col justify-between shadow-lg">
+      <h3 class="text-[10px] font-bold text-purple-400">BIOMETRIC</h3>
+      <div class="text-[10px] text-green-400 font-bold">Face ID / Touch ID</div>
+    </a>
 
-    <!-- Square Box 2 -->
-    <div class="aspect-square bg-[#18092e] border border-purple-800/60 p-3 rounded-xl flex flex-col justify-between shadow-lg">
-      <h3 class="text-[11px] font-bold text-purple-300 border-b border-purple-900/80 pb-1">GOOGLE AUTH</h3>
-      <div class="bg-[#0d041a] p-2 rounded text-center text-blue-400 font-bold text-xs">Connected</div>
-      <span class="text-[9px] text-gray-400">OAuth 2.0</span>
-    </div>
+    <!-- 2. GOOGLE -->
+    <a href="https://myaccount.google.com/" target="_blank" class="dashboard-card aspect-square bg-[#18092e] border border-purple-800 p-3 rounded-2xl flex flex-col justify-between shadow-lg">
+      <h3 class="text-[10px] font-bold text-purple-400">GOOGLE</h3>
+      <div class="text-[10px] text-blue-400 font-bold text-center">Connected</div>
+    </a>
 
-    <!-- Square Box 3 -->
-    <div class="aspect-square bg-[#18092e] border border-purple-800/60 p-3 rounded-xl flex flex-col justify-between shadow-lg">
-      <h3 class="text-[11px] font-bold text-purple-300 border-b border-purple-900/80 pb-1">FACEBOOK AUTH</h3>
-      <div class="bg-[#0d041a] p-2 rounded text-center text-sky-400 font-bold text-xs">Linked</div>
-      <span class="text-[9px] text-gray-400">Meta Secure</span>
-    </div>
+    <!-- 3. FACEBOOK -->
+    <a href="https://www.facebook.com/settings" target="_blank" class="dashboard-card aspect-square bg-[#18092e] border border-purple-800 p-3 rounded-2xl flex flex-col justify-between shadow-lg">
+      <h3 class="text-[10px] font-bold text-purple-400">FACEBOOK</h3>
+      <div class="text-[10px] text-sky-400 font-bold text-center">Linked</div>
+    </a>
 
-    <!-- Square Box 4 -->
-    <div class="aspect-square bg-[#18092e] border border-purple-800/60 p-3 rounded-xl flex flex-col justify-between shadow-lg">
-      <h3 class="text-[11px] font-bold text-purple-300 border-b border-purple-900/80 pb-1">INSTAGRAM AUTH</h3>
-      <div class="bg-[#0d041a] p-2 rounded text-center text-pink-400 font-bold text-xs">Linked</div>
-      <span class="text-[9px] text-gray-400">Token Active</span>
-    </div>
+    <!-- 4. INSTAGRAM -->
+    <a href="https://www.instagram.com/accounts/edit/" target="_blank" class="dashboard-card aspect-square bg-[#18092e] border border-purple-800 p-3 rounded-2xl flex flex-col justify-between shadow-lg">
+      <h3 class="text-[10px] font-bold text-purple-400">INSTAGRAM</h3>
+      <div class="text-[10px] text-pink-400 font-bold text-center">Linked</div>
+    </a>
 
-    <!-- Square Box 5 -->
-    <div class="aspect-square bg-[#18092e] border border-purple-800/60 p-3 rounded-xl flex flex-col justify-between shadow-lg">
-      <h3 class="text-[11px] font-bold text-purple-300 border-b border-purple-900/80 pb-1">GITHUB AUTH</h3>
-      <div class="bg-[#0d041a] p-2 rounded text-center text-gray-300 font-bold text-xs">Verified</div>
-      <span class="text-[9px] text-gray-400">SSH Key Active</span>
-    </div>
+    <!-- 5. GITHUB -->
+    <a href="https://github.com/settings/profile" target="_blank" class="dashboard-card aspect-square bg-[#18092e] border border-purple-800 p-3 rounded-2xl flex flex-col justify-between shadow-lg">
+      <h3 class="text-[10px] font-bold text-purple-400">GITHUB</h3>
+      <div class="text-[10px] text-gray-300 font-bold text-center">Verified</div>
+    </a>
 
-    <!-- Square Box 6 -->
-    <div class="aspect-square bg-[#18092e] border border-purple-800/60 p-3 rounded-xl flex flex-col justify-between shadow-lg">
-      <h3 class="text-[11px] font-bold text-purple-300 border-b border-purple-900/80 pb-1">BACKUP CODE</h3>
-      <div class="bg-[#0d041a] p-2 rounded text-center font-mono text-yellow-300 font-bold text-xs">849-201</div>
-      <span class="text-[9px] text-gray-400">8 Keys Left</span>
-    </div>
+    <!-- 6. BACKUP -->
+    <a href="#" onclick="alert('Your Backup Key: 849-201')" class="dashboard-card aspect-square bg-[#18092e] border border-purple-800 p-3 rounded-2xl flex flex-col justify-between shadow-lg">
+      <h3 class="text-[10px] font-bold text-purple-400">BACKUP</h3>
+      <div class="text-[10px] text-yellow-300 font-bold text-center">849-201</div>
+    </a>
 
-    <!-- Square Box 7 -->
-    <div class="aspect-square bg-[#18092e] border border-purple-800/60 p-3 rounded-xl flex flex-col justify-between shadow-lg">
-      <h3 class="text-[11px] font-bold text-purple-300 border-b border-purple-900/80 pb-1">KYC STATUS</h3>
-      <div class="bg-[#0d041a] p-2 rounded text-center text-yellow-400 font-bold text-xs">Pending ID</div>
-      <span class="text-[9px] text-gray-400">Verification</span>
-    </div>
+    <!-- 7. KYC -->
+    <a href="#" onclick="alert('Verification in progress...')" class="dashboard-card aspect-square bg-[#18092e] border border-purple-800 p-3 rounded-2xl flex flex-col justify-between shadow-lg">
+      <h3 class="text-[10px] font-bold text-purple-400">KYC</h3>
+      <div class="text-[10px] text-yellow-400 font-bold text-center">Pending</div>
+    </a>
 
-    <!-- Square Box 8 -->
-    <div class="aspect-square bg-[#18092e] border border-purple-800/60 p-3 rounded-xl flex flex-col justify-between shadow-lg">
-      <h3 class="text-[11px] font-bold text-purple-300 border-b border-purple-900/80 pb-1">CAPTCHA SHIELD</h3>
-      <div class="bg-[#0d041a] p-2 rounded text-center text-green-400 font-bold text-xs">Passed</div>
-      <span class="text-[9px] text-gray-400">Bot Shield</span>
-    </div>
+    <!-- 8. CAPTCHA -->
+    <a href="#" class="dashboard-card aspect-square bg-[#18092e] border border-purple-800 p-3 rounded-2xl flex flex-col justify-between shadow-lg">
+      <h3 class="text-[10px] font-bold text-purple-400">CAPTCHA</h3>
+      <div class="text-[10px] text-green-400 font-bold text-center">Passed</div>
+    </a>
 
-    <!-- Square Box 9 -->
-    <div class="aspect-square bg-[#18092e] border border-purple-800/60 p-3 rounded-xl flex flex-col justify-between shadow-lg">
-      <h3 class="text-[11px] font-bold text-purple-300 border-b border-purple-900/80 pb-1">RATE LIMITER</h3>
-      <div class="w-full bg-purple-950 h-2 rounded-full"><div class="bg-purple-500 w-3/4 h-2 rounded-full"></div></div>
-      <span class="text-[9px] text-gray-400">Redis Active</span>
-    </div>
+    <!-- 9. RATE LIMITER -->
+    <a href="#" class="dashboard-card aspect-square bg-[#18092e] border border-purple-800 p-3 rounded-2xl flex flex-col justify-between shadow-lg">
+      <h3 class="text-[10px] font-bold text-purple-400">RATE</h3>
+      <div class="text-[10px] text-purple-300 font-bold text-center">Active</div>
+    </a>
 
-    <!-- Square Box 10 -->
-    <div class="aspect-square bg-[#18092e] border border-purple-800/60 p-3 rounded-xl flex flex-col justify-between shadow-lg">
-      <h3 class="text-[11px] font-bold text-purple-300 border-b border-purple-900/80 pb-1">IP REPUTATION</h3>
-      <div class="bg-[#0d041a] p-2 rounded text-center text-green-400 font-bold text-xs">98 / 100</div>
-      <span class="text-[9px] text-gray-400">Clean IP</span>
-    </div>
+    <!-- 10. IP -->
+    <a href="#" class="dashboard-card aspect-square bg-[#18092e] border border-purple-800 p-3 rounded-2xl flex flex-col justify-between shadow-lg">
+      <h3 class="text-[10px] font-bold text-purple-400">IP</h3>
+      <div class="text-[10px] text-green-400 font-bold text-center">98/100</div>
+    </a>
 
-    <!-- Square Box 11 -->
-    <div class="aspect-square bg-[#18092e] border border-purple-800/60 p-3 rounded-xl flex flex-col justify-between shadow-lg">
-      <h3 class="text-[11px] font-bold text-purple-300 border-b border-purple-900/80 pb-1">SERVER HEALTH</h3>
-      <div class="bg-[#0d041a] p-2 rounded text-center text-purple-300 font-bold text-xs">12% Load</div>
-      <span class="text-[9px] text-gray-400">CPU Normal</span>
-    </div>
+    <!-- 11. HEALTH -->
+    <a href="#" class="dashboard-card aspect-square bg-[#18092e] border border-purple-800 p-3 rounded-2xl flex flex-col justify-between shadow-lg">
+      <h3 class="text-[10px] font-bold text-purple-400">HEALTH</h3>
+      <div class="text-[10px] text-purple-300 font-bold text-center">12% Load</div>
+    </a>
 
-    <!-- Square Box 12 -->
-    <div class="aspect-square bg-[#18092e] border border-purple-800/60 p-3 rounded-xl flex flex-col justify-between shadow-lg">
-      <h3 class="text-[11px] font-bold text-purple-300 border-b border-purple-900/80 pb-1">THREAT LOGS</h3>
-      <div class="bg-[#0d041a] p-1.5 rounded font-mono text-[8px] text-red-400 truncate">> Blocked IP</div>
-      <span class="text-[9px] text-gray-400">Realtime</span>
-    </div>
+    <!-- 12. THREATS -->
+    <a href="#" class="dashboard-card aspect-square bg-[#18092e] border border-purple-800 p-3 rounded-2xl flex flex-col justify-between shadow-lg">
+      <h3 class="text-[10px] font-bold text-purple-400">THREATS</h3>
+      <div class="text-[10px] text-red-400 font-bold text-center">Blocked</div>
+    </a>
 
   </div>
 
-  <!-- Live Chat Script -->
   <script src="//code.tidio.co/q08b1h5jntzru2q6adozdletxhmwfipo.js" async></script>
-
 </body>
-  </html>
+                                                                 </html>
