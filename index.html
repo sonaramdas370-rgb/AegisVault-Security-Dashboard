@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AegisVault Pro</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Font Awesome for Real Logos -->
+  <!-- Font Awesome for Logos -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     .glass-card { 
@@ -14,7 +14,6 @@
       border: 1px solid rgba(255, 255, 255, 0.1);
       transition: all 0.3s ease;
     }
-    .glass-card:hover { transform: scale(1.02); border-color: #a855f7; }
   </style>
 </head>
 <body class="bg-[#050508] text-white min-h-screen p-4">
@@ -24,64 +23,22 @@
     <p class="text-[10px] text-gray-400">System Status: <span class="text-green-500">● Operational</span></p>
   </header>
 
-  <div class="grid grid-cols-2 gap-4">
-    
-    <!-- Profit -->
-    <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
-      <i class="fa-solid fa-chart-line text-green-400 text-2xl"></i>
-      <div>
-        <h3 class="text-[9px] font-bold text-gray-400">PROFIT</h3>
-        <p class="text-lg font-bold text-green-400">+$2,480</p>
-      </div>
-    </div>
-
-    <!-- Google (Real Logo) -->
-    <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
-      <i class="fa-brands fa-google text-blue-500 text-2xl"></i>
-      <div>
-        <h3 class="text-[9px] font-bold text-gray-400">GOOGLE</h3>
-        <p class="text-[10px]">Connected</p>
-      </div>
-    </div>
-
-    <!-- Facebook (Real Logo) -->
-    <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
-      <i class="fa-brands fa-facebook text-blue-600 text-2xl"></i>
-      <div>
-        <h3 class="text-[9px] font-bold text-gray-400">FACEBOOK</h3>
-        <p class="text-[10px]">Linked</p>
-      </div>
-    </div>
-
-    <!-- Instagram (Real Logo) -->
-    <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
-      <i class="fa-brands fa-instagram text-pink-500 text-2xl"></i>
-      <div>
-        <h3 class="text-[9px] font-bold text-gray-400">INSTAGRAM</h3>
-        <p class="text-[10px]">Linked</p>
-      </div>
-    </div>
-
-    <!-- Github (Real Logo) -->
-    <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
-      <i class="fa-brands fa-github text-white text-2xl"></i>
-      <div>
-        <h3 class="text-[9px] font-bold text-gray-400">GITHUB</h3>
-        <p class="text-[10px]">Verified</p>
-      </div>
-    </div>
-
-    <!-- Threats -->
-    <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
-      <i class="fa-solid fa-shield-halved text-red-500 text-2xl"></i>
-      <div>
-        <h3 class="text-[9px] font-bold text-gray-400">THREATS</h3>
-        <p class="text-[10px]">0 Blocked</p>
-      </div>
-    </div>
+  <div class="grid grid-cols-2 gap-3">
+    <!-- 12 Boxes -->
+    <div class="glass-card aspect-square p-3 rounded-2xl flex flex-col justify-between"><i class="fa-solid fa-chart-line text-green-400"></i><h3 class="text-[8px] text-gray-400">PROFIT</h3><p class="text-xs font-bold">+$2,480</p></div>
+    <div class="glass-card aspect-square p-3 rounded-2xl flex flex-col justify-between"><i class="fa-solid fa-fingerprint text-purple-400"></i><h3 class="text-[8px] text-gray-400">BIOMETRIC</h3><p class="text-xs">FaceID Active</p></div>
+    <div class="glass-card aspect-square p-3 rounded-2xl flex flex-col justify-between"><i class="fa-brands fa-google text-blue-500"></i><h3 class="text-[8px] text-gray-400">GOOGLE</h3><p class="text-xs">Connected</p></div>
+    <div class="glass-card aspect-square p-3 rounded-2xl flex flex-col justify-between"><i class="fa-brands fa-facebook text-blue-600"></i><h3 class="text-[8px] text-gray-400">FACEBOOK</h3><p class="text-xs">Linked</p></div>
+    <div class="glass-card aspect-square p-3 rounded-2xl flex flex-col justify-between"><i class="fa-brands fa-instagram text-pink-500"></i><h3 class="text-[8px] text-gray-400">INSTAGRAM</h3><p class="text-xs">Linked</p></div>
+    <div class="glass-card aspect-square p-3 rounded-2xl flex flex-col justify-between"><i class="fa-brands fa-github text-white"></i><h3 class="text-[8px] text-gray-400">GITHUB</h3><p class="text-xs">Verified</p></div>
+    <div class="glass-card aspect-square p-3 rounded-2xl flex flex-col justify-between"><i class="fa-solid fa-key text-yellow-400"></i><h3 class="text-[8px] text-gray-400">BACKUP</h3><p class="text-xs">849-201</p></div>
+    <div class="glass-card aspect-square p-3 rounded-2xl flex flex-col justify-between"><i class="fa-solid fa-id-card text-yellow-500"></i><h3 class="text-[8px] text-gray-400">KYC</h3><p class="text-xs">Pending</p></div>
+    <div class="glass-card aspect-square p-3 rounded-2xl flex flex-col justify-between"><i class="fa-solid fa-robot text-green-400"></i><h3 class="text-[8px] text-gray-400">CAPTCHA</h3><p class="text-xs">Passed</p></div>
+    <div class="glass-card aspect-square p-3 rounded-2xl flex flex-col justify-between"><i class="fa-solid fa-gauge-high text-purple-400"></i><h3 class="text-[8px] text-gray-400">RATE</h3><p class="text-xs">Active</p></div>
+    <div class="glass-card aspect-square p-3 rounded-2xl flex flex-col justify-between"><i class="fa-solid fa-network-wired text-green-400"></i><h3 class="text-[8px] text-gray-400">IP STATUS</h3><p class="text-xs">98.2/100</p></div>
+    <div class="glass-card aspect-square p-3 rounded-2xl flex flex-col justify-between"><i class="fa-solid fa-shield-halved text-red-500"></i><h3 class="text-[8px] text-gray-400">THREATS</h3><p class="text-xs">0 Blocked</p></div>
   </div>
 
-  <!-- Tidio Chat -->
   <script src="//code.tidio.co/q08b1h5jntzru2q6adozdletxhmwfipo.js" async></script>
 </body>
 </html>
