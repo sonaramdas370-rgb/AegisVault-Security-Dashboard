@@ -3,99 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AegisVault AI - Interactive Dashboard</title>
+  <title>AegisVault Pro</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* smooth animation effect */
-    .dashboard-card { transition: all 0.3s ease; }
-    .dashboard-card:hover { transform: scale(1.05); border-color: #a855f7; }
+    /* Glassmorphism Effect */
+    .glass-card { 
+      background: rgba(255, 255, 255, 0.03); 
+      backdrop-filter: blur(10px); 
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.4s ease;
+    }
+    .glass-card:hover { transform: scale(1.03); border: 1px solid #a855f7; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+    .live-dot { animation: pulse 1.5s infinite; }
   </style>
 </head>
-<body class="bg-[#0b0314] text-white min-h-screen p-4">
+<body class="bg-[#050508] text-white min-h-screen p-4">
 
   <!-- Header -->
-  <header class="mb-4 bg-[#150727] p-4 rounded-xl border border-purple-900 shadow-xl">
-    <h1 class="text-lg font-bold text-purple-300">AegisVault AI Dashboard</h1>
-    <p class="text-[10px] text-purple-500">Click any box to manage settings</p>
+  <header class="mb-6">
+    <h1 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">AegisVault Pro</h1>
+    <p class="text-[10px] text-gray-400">System Status: <span class="text-green-500">● Operational</span></p>
   </header>
 
-  <!-- Interactive Grid -->
   <div class="grid grid-cols-2 gap-4">
     
-    <!-- 1. BIOMETRIC -->
-    <a href="#" onclick="alert('Opening Biometric Settings...')" class="dashboard-card aspect-square bg-[#18092e] border border-purple-800 p-3 rounded-2xl flex flex-col justify-between shadow-lg">
-      <h3 class="text-[10px] font-bold text-purple-400">BIOMETRIC</h3>
-      <div class="text-[10px] text-green-400 font-bold">Face ID / Touch ID</div>
+    <!-- 1. PROFIT/ANALYTICS BOX (The Mass Look) -->
+    <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
+      <h3 class="text-[9px] font-bold text-gray-400 tracking-widest">PROFIT ANALYTICS</h3>
+      <div>
+        <div class="text-xl font-bold text-green-400">+$2,480</div>
+        <div class="text-[9px] text-green-600 font-bold">▲ 12.5% vs last month</div>
+      </div>
+    </div>
+
+    <!-- 2. BIOMETRIC -->
+    <a href="#" class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
+      <h3 class="text-[9px] font-bold text-gray-400">BIOMETRIC</h3>
+      <div class="text-[10px] text-white">FaceID <span class="text-green-500">Active</span></div>
     </a>
 
-    <!-- 2. GOOGLE -->
-    <a href="https://myaccount.google.com/" target="_blank" class="dashboard-card aspect-square bg-[#18092e] border border-purple-800 p-3 rounded-2xl flex flex-col justify-between shadow-lg">
-      <h3 class="text-[10px] font-bold text-purple-400">GOOGLE</h3>
-      <div class="text-[10px] text-blue-400 font-bold text-center">Connected</div>
+    <!-- 3. GOOGLE -->
+    <a href="#" class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
+      <h3 class="text-[9px] font-bold text-gray-400">GOOGLE</h3>
+      <div class="text-[10px] text-blue-400">Connected</div>
     </a>
 
-    <!-- 3. FACEBOOK -->
-    <a href="https://www.facebook.com/settings" target="_blank" class="dashboard-card aspect-square bg-[#18092e] border border-purple-800 p-3 rounded-2xl flex flex-col justify-between shadow-lg">
-      <h3 class="text-[10px] font-bold text-purple-400">FACEBOOK</h3>
-      <div class="text-[10px] text-sky-400 font-bold text-center">Linked</div>
-    </a>
-
-    <!-- 4. INSTAGRAM -->
-    <a href="https://www.instagram.com/accounts/edit/" target="_blank" class="dashboard-card aspect-square bg-[#18092e] border border-purple-800 p-3 rounded-2xl flex flex-col justify-between shadow-lg">
-      <h3 class="text-[10px] font-bold text-purple-400">INSTAGRAM</h3>
-      <div class="text-[10px] text-pink-400 font-bold text-center">Linked</div>
+    <!-- 4. THREATS -->
+    <a href="#" class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
+      <h3 class="text-[9px] font-bold text-gray-400">THREATS</h3>
+      <div class="text-[10px] text-red-500">0 Blocked</div>
     </a>
 
     <!-- 5. GITHUB -->
-    <a href="https://github.com/settings/profile" target="_blank" class="dashboard-card aspect-square bg-[#18092e] border border-purple-800 p-3 rounded-2xl flex flex-col justify-between shadow-lg">
-      <h3 class="text-[10px] font-bold text-purple-400">GITHUB</h3>
-      <div class="text-[10px] text-gray-300 font-bold text-center">Verified</div>
+    <a href="#" class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
+      <h3 class="text-[9px] font-bold text-gray-400">GITHUB</h3>
+      <div class="text-[10px] text-gray-300">Verified</div>
     </a>
 
-    <!-- 6. BACKUP -->
-    <a href="#" onclick="alert('Your Backup Key: 849-201')" class="dashboard-card aspect-square bg-[#18092e] border border-purple-800 p-3 rounded-2xl flex flex-col justify-between shadow-lg">
-      <h3 class="text-[10px] font-bold text-purple-400">BACKUP</h3>
-      <div class="text-[10px] text-yellow-300 font-bold text-center">849-201</div>
-    </a>
-
-    <!-- 7. KYC -->
-    <a href="#" onclick="alert('Verification in progress...')" class="dashboard-card aspect-square bg-[#18092e] border border-purple-800 p-3 rounded-2xl flex flex-col justify-between shadow-lg">
-      <h3 class="text-[10px] font-bold text-purple-400">KYC</h3>
-      <div class="text-[10px] text-yellow-400 font-bold text-center">Pending</div>
-    </a>
-
-    <!-- 8. CAPTCHA -->
-    <a href="#" class="dashboard-card aspect-square bg-[#18092e] border border-purple-800 p-3 rounded-2xl flex flex-col justify-between shadow-lg">
-      <h3 class="text-[10px] font-bold text-purple-400">CAPTCHA</h3>
-      <div class="text-[10px] text-green-400 font-bold text-center">Passed</div>
-    </a>
-
-    <!-- 9. RATE LIMITER -->
-    <a href="#" class="dashboard-card aspect-square bg-[#18092e] border border-purple-800 p-3 rounded-2xl flex flex-col justify-between shadow-lg">
-      <h3 class="text-[10px] font-bold text-purple-400">RATE</h3>
-      <div class="text-[10px] text-purple-300 font-bold text-center">Active</div>
-    </a>
-
-    <!-- 10. IP -->
-    <a href="#" class="dashboard-card aspect-square bg-[#18092e] border border-purple-800 p-3 rounded-2xl flex flex-col justify-between shadow-lg">
-      <h3 class="text-[10px] font-bold text-purple-400">IP</h3>
-      <div class="text-[10px] text-green-400 font-bold text-center">98/100</div>
-    </a>
-
-    <!-- 11. HEALTH -->
-    <a href="#" class="dashboard-card aspect-square bg-[#18092e] border border-purple-800 p-3 rounded-2xl flex flex-col justify-between shadow-lg">
-      <h3 class="text-[10px] font-bold text-purple-400">HEALTH</h3>
-      <div class="text-[10px] text-purple-300 font-bold text-center">12% Load</div>
-    </a>
-
-    <!-- 12. THREATS -->
-    <a href="#" class="dashboard-card aspect-square bg-[#18092e] border border-purple-800 p-3 rounded-2xl flex flex-col justify-between shadow-lg">
-      <h3 class="text-[10px] font-bold text-purple-400">THREATS</h3>
-      <div class="text-[10px] text-red-400 font-bold text-center">Blocked</div>
+    <!-- 6. IP REPUTATION -->
+    <a href="#" class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
+      <h3 class="text-[9px] font-bold text-gray-400">IP STATUS</h3>
+      <div class="text-[12px] text-green-400 font-mono">98.2/100</div>
     </a>
 
   </div>
-
-  <script src="//code.tidio.co/q08b1h5jntzru2q6adozdletxhmwfipo.js" async></script>
 </body>
-                                                                 </html>
+</html>
