@@ -5,14 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AegisVault Pro</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome for Real Logos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     .glass-card { 
       background: rgba(255, 255, 255, 0.03); 
       backdrop-filter: blur(10px); 
       border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: all 0.4s ease;
+      transition: all 0.3s ease;
     }
-    .glass-card:hover { transform: scale(1.03); border: 1px solid #a855f7; }
+    .glass-card:hover { transform: scale(1.02); border-color: #a855f7; }
   </style>
 </head>
 <body class="bg-[#050508] text-white min-h-screen p-4">
@@ -24,78 +26,62 @@
 
   <div class="grid grid-cols-2 gap-4">
     
-    <!-- Box 1 -->
+    <!-- Profit -->
     <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
-      <h3 class="text-[9px] font-bold text-gray-400 tracking-widest">PROFIT</h3>
-      <div class="text-lg font-bold text-green-400">+$2,480</div>
+      <i class="fa-solid fa-chart-line text-green-400 text-2xl"></i>
+      <div>
+        <h3 class="text-[9px] font-bold text-gray-400">PROFIT</h3>
+        <p class="text-lg font-bold text-green-400">+$2,480</p>
+      </div>
     </div>
 
-    <!-- Box 2 -->
+    <!-- Google (Real Logo) -->
     <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
-      <h3 class="text-[9px] font-bold text-gray-400">BIOMETRIC</h3>
-      <div class="text-[10px] text-white">FaceID <span class="text-green-500">Active</span></div>
+      <i class="fa-brands fa-google text-blue-500 text-2xl"></i>
+      <div>
+        <h3 class="text-[9px] font-bold text-gray-400">GOOGLE</h3>
+        <p class="text-[10px]">Connected</p>
+      </div>
     </div>
 
-    <!-- Box 3 -->
+    <!-- Facebook (Real Logo) -->
     <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
-      <h3 class="text-[9px] font-bold text-gray-400">GOOGLE</h3>
-      <div class="text-[10px] text-blue-400">Connected</div>
+      <i class="fa-brands fa-facebook text-blue-600 text-2xl"></i>
+      <div>
+        <h3 class="text-[9px] font-bold text-gray-400">FACEBOOK</h3>
+        <p class="text-[10px]">Linked</p>
+      </div>
     </div>
 
-    <!-- Box 4 -->
+    <!-- Instagram (Real Logo) -->
     <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
-      <h3 class="text-[9px] font-bold text-gray-400">FACEBOOK</h3>
-      <div class="text-[10px] text-sky-400">Linked</div>
+      <i class="fa-brands fa-instagram text-pink-500 text-2xl"></i>
+      <div>
+        <h3 class="text-[9px] font-bold text-gray-400">INSTAGRAM</h3>
+        <p class="text-[10px]">Linked</p>
+      </div>
     </div>
 
-    <!-- Box 5 -->
+    <!-- Github (Real Logo) -->
     <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
-      <h3 class="text-[9px] font-bold text-gray-400">INSTAGRAM</h3>
-      <div class="text-[10px] text-pink-400">Linked</div>
+      <i class="fa-brands fa-github text-white text-2xl"></i>
+      <div>
+        <h3 class="text-[9px] font-bold text-gray-400">GITHUB</h3>
+        <p class="text-[10px]">Verified</p>
+      </div>
     </div>
 
-    <!-- Box 6 -->
+    <!-- Threats -->
     <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
-      <h3 class="text-[9px] font-bold text-gray-400">GITHUB</h3>
-      <div class="text-[10px] text-gray-300">Verified</div>
+      <i class="fa-solid fa-shield-halved text-red-500 text-2xl"></i>
+      <div>
+        <h3 class="text-[9px] font-bold text-gray-400">THREATS</h3>
+        <p class="text-[10px]">0 Blocked</p>
+      </div>
     </div>
-
-    <!-- Box 7 -->
-    <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
-      <h3 class="text-[9px] font-bold text-gray-400">BACKUP</h3>
-      <div class="text-[10px] text-yellow-300">849-201</div>
-    </div>
-
-    <!-- Box 8 -->
-    <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
-      <h3 class="text-[9px] font-bold text-gray-400">KYC</h3>
-      <div class="text-[10px] text-yellow-400">Pending</div>
-    </div>
-
-    <!-- Box 9 -->
-    <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
-      <h3 class="text-[9px] font-bold text-gray-400">CAPTCHA</h3>
-      <div class="text-[10px] text-green-400">Passed</div>
-    </div>
-
-    <!-- Box 10 -->
-    <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
-      <h3 class="text-[9px] font-bold text-gray-400">RATE</h3>
-      <div class="text-[10px] text-purple-400">Active</div>
-    </div>
-
-    <!-- Box 11 -->
-    <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
-      <h3 class="text-[9px] font-bold text-gray-400">IP STATUS</h3>
-      <div class="text-[10px] text-green-400">98.2/100</div>
-    </div>
-
-    <!-- Box 12 -->
-    <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
-      <h3 class="text-[9px] font-bold text-gray-400">THREATS</h3>
-      <div class="text-[10px] text-red-500">0 Blocked</div>
-    </div>
-
   </div>
+
+  <!-- Tidio Chat -->
+  <script src="//code.tidio.co/q08b1h5jntzru2q6adozdletxhmwfipo.js" async></script>
 </body>
 </html>
