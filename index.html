@@ -6,7 +6,6 @@
   <title>AegisVault Pro</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Glassmorphism Effect */
     .glass-card { 
       background: rgba(255, 255, 255, 0.03); 
       backdrop-filter: blur(10px); 
@@ -14,13 +13,10 @@
       transition: all 0.4s ease;
     }
     .glass-card:hover { transform: scale(1.03); border: 1px solid #a855f7; }
-    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
-    .live-dot { animation: pulse 1.5s infinite; }
   </style>
 </head>
 <body class="bg-[#050508] text-white min-h-screen p-4">
 
-  <!-- Header -->
   <header class="mb-6">
     <h1 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">AegisVault Pro</h1>
     <p class="text-[10px] text-gray-400">System Status: <span class="text-green-500">● Operational</span></p>
@@ -28,44 +24,77 @@
 
   <div class="grid grid-cols-2 gap-4">
     
-    <!-- 1. PROFIT/ANALYTICS BOX (The Mass Look) -->
+    <!-- Box 1 -->
     <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
-      <h3 class="text-[9px] font-bold text-gray-400 tracking-widest">PROFIT ANALYTICS</h3>
-      <div>
-        <div class="text-xl font-bold text-green-400">+$2,480</div>
-        <div class="text-[9px] text-green-600 font-bold">▲ 12.5% vs last month</div>
-      </div>
+      <h3 class="text-[9px] font-bold text-gray-400 tracking-widest">PROFIT</h3>
+      <div class="text-lg font-bold text-green-400">+$2,480</div>
     </div>
 
-    <!-- 2. BIOMETRIC -->
-    <a href="#" class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
+    <!-- Box 2 -->
+    <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
       <h3 class="text-[9px] font-bold text-gray-400">BIOMETRIC</h3>
       <div class="text-[10px] text-white">FaceID <span class="text-green-500">Active</span></div>
-    </a>
+    </div>
 
-    <!-- 3. GOOGLE -->
-    <a href="#" class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
+    <!-- Box 3 -->
+    <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
       <h3 class="text-[9px] font-bold text-gray-400">GOOGLE</h3>
       <div class="text-[10px] text-blue-400">Connected</div>
-    </a>
+    </div>
 
-    <!-- 4. THREATS -->
-    <a href="#" class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
-      <h3 class="text-[9px] font-bold text-gray-400">THREATS</h3>
-      <div class="text-[10px] text-red-500">0 Blocked</div>
-    </a>
+    <!-- Box 4 -->
+    <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
+      <h3 class="text-[9px] font-bold text-gray-400">FACEBOOK</h3>
+      <div class="text-[10px] text-sky-400">Linked</div>
+    </div>
 
-    <!-- 5. GITHUB -->
-    <a href="#" class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
+    <!-- Box 5 -->
+    <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
+      <h3 class="text-[9px] font-bold text-gray-400">INSTAGRAM</h3>
+      <div class="text-[10px] text-pink-400">Linked</div>
+    </div>
+
+    <!-- Box 6 -->
+    <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
       <h3 class="text-[9px] font-bold text-gray-400">GITHUB</h3>
       <div class="text-[10px] text-gray-300">Verified</div>
-    </a>
+    </div>
 
-    <!-- 6. IP REPUTATION -->
-    <a href="#" class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
+    <!-- Box 7 -->
+    <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
+      <h3 class="text-[9px] font-bold text-gray-400">BACKUP</h3>
+      <div class="text-[10px] text-yellow-300">849-201</div>
+    </div>
+
+    <!-- Box 8 -->
+    <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
+      <h3 class="text-[9px] font-bold text-gray-400">KYC</h3>
+      <div class="text-[10px] text-yellow-400">Pending</div>
+    </div>
+
+    <!-- Box 9 -->
+    <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
+      <h3 class="text-[9px] font-bold text-gray-400">CAPTCHA</h3>
+      <div class="text-[10px] text-green-400">Passed</div>
+    </div>
+
+    <!-- Box 10 -->
+    <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
+      <h3 class="text-[9px] font-bold text-gray-400">RATE</h3>
+      <div class="text-[10px] text-purple-400">Active</div>
+    </div>
+
+    <!-- Box 11 -->
+    <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
       <h3 class="text-[9px] font-bold text-gray-400">IP STATUS</h3>
-      <div class="text-[12px] text-green-400 font-mono">98.2/100</div>
-    </a>
+      <div class="text-[10px] text-green-400">98.2/100</div>
+    </div>
+
+    <!-- Box 12 -->
+    <div class="glass-card aspect-square p-4 rounded-3xl flex flex-col justify-between">
+      <h3 class="text-[9px] font-bold text-gray-400">THREATS</h3>
+      <div class="text-[10px] text-red-500">0 Blocked</div>
+    </div>
 
   </div>
 </body>
