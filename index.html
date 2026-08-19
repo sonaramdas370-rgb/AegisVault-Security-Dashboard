@@ -1,43 +1,65 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AegisVault Pro</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    .glass-card { 
-      background: rgba(255, 255, 255, 0.03); 
-      backdrop-filter: blur(8px); 
-      border: 1px solid rgba(255, 255, 255, 0.05);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AegisVault Pro - Dashboard</title>
+    <style>
+        body { background-color: #0b0b0b; color: #ffffff; font-family: Arial, sans-serif; margin: 0; padding: 15px; }
+        .header { margin-bottom: 20px; }
+        .header h1 { color: #d183ff; margin: 0; font-size: 22px; }
+        .grid-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+        .card-link { text-decoration: none; color: inherit; display: block; }
+        .card { background-color: #161616; border-radius: 12px; padding: 15px; height: 105px; display: flex; flex-direction: column; justify-content: space-between; transition: 0.2s; }
+        .card:hover { background-color: #222222; }
+        .card-top { font-size: 20px; }
+        .card-bottom .title { font-size: 10px; color: #888888; letter-spacing: 1px; font-weight: bold; }
+        .card-bottom .value { font-size: 14px; font-weight: bold; margin-top: 2px; }
+    </style>
 </head>
-<body class="bg-[#050508] text-white p-3">
+<body>
 
-  <header class="mb-4">
-    <h1 class="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600">AegisVault Pro</h1>
-    <p class="text-[9px] text-gray-500">System Status: <span class="text-green-500">● Operational</span></p>
-  </header>
+    <div class="header"><h1>AegisVault Pro</h1></div>
 
-  <!-- Grid 2 columns -->
-  <div class="grid grid-cols-2 gap-2">
-    <!-- Box 1-12 -->
-    <div class="glass-card p-3 rounded-xl flex flex-col justify-between"><i class="fa-solid fa-chart-line text-green-400 text-sm"></i><h3 class="text-[7px] text-gray-500">PROFIT</h3><p class="text-[10px] font-bold">+$2,480</p></div>
-    <div class="glass-card p-3 rounded-xl flex flex-col justify-between"><i class="fa-solid fa-fingerprint text-purple-400 text-sm"></i><h3 class="text-[7px] text-gray-500">BIOMETRIC</h3><p class="text-[10px]">Active</p></div>
-    <div class="glass-card p-3 rounded-xl flex flex-col justify-between"><i class="fa-brands fa-google text-blue-500 text-sm"></i><h3 class="text-[7px] text-gray-500">GOOGLE</h3><p class="text-[10px]">Connected</p></div>
-    <div class="glass-card p-3 rounded-xl flex flex-col justify-between"><i class="fa-brands fa-facebook text-blue-600 text-sm"></i><h3 class="text-[7px] text-gray-500">FACEBOOK</h3><p class="text-[10px]">Linked</p></div>
-    <div class="glass-card p-3 rounded-xl flex flex-col justify-between"><i class="fa-brands fa-instagram text-pink-500 text-sm"></i><h3 class="text-[7px] text-gray-500">INSTAGRAM</h3><p class="text-[10px]">Linked</p></div>
-    <div class="glass-card p-3 rounded-xl flex flex-col justify-between"><i class="fa-brands fa-github text-white text-sm"></i><h3 class="text-[7px] text-gray-500">GITHUB</h3><p class="text-[10px]">Verified</p></div>
-    <div class="glass-card p-3 rounded-xl flex flex-col justify-between"><i class="fa-solid fa-key text-yellow-500 text-sm"></i><h3 class="text-[7px] text-gray-500">BACKUP</h3><p class="text-[10px]">849-201</p></div>
-    <div class="glass-card p-3 rounded-xl flex flex-col justify-between"><i class="fa-solid fa-id-card text-yellow-600 text-sm"></i><h3 class="text-[7px] text-gray-500">KYC</h3><p class="text-[10px]">Pending</p></div>
-    <div class="glass-card p-3 rounded-xl flex flex-col justify-between"><i class="fa-solid fa-robot text-green-400 text-sm"></i><h3 class="text-[7px] text-gray-500">CAPTCHA</h3><p class="text-[10px]">Passed</p></div>
-    <div class="glass-card p-3 rounded-xl flex flex-col justify-between"><i class="fa-solid fa-gauge text-purple-400 text-sm"></i><h3 class="text-[7px] text-gray-500">RATE</h3><p class="text-[10px]">Active</p></div>
-    <div class="glass-card p-3 rounded-xl flex flex-col justify-between"><i class="fa-solid fa-network-wired text-green-400 text-sm"></i><h3 class="text-[7px] text-gray-500">IP STATUS</h3><p class="text-[10px]">98.2/100</p></div>
-    <div class="glass-card p-3 rounded-xl flex flex-col justify-between"><i class="fa-solid fa-shield text-red-500 text-sm"></i><h3 class="text-[7px] text-gray-500">THREATS</h3><p class="text-[10px]">0 Blocked</p></div>
-  </div>
+    <div class="grid-container">
+        <!-- 1. PROFIT -->
+        <a href="#" class="card-link"><div class="card"><div class="card-top">📈</div><div class="card-bottom"><div class="title">PROFIT</div><div class="value" style="color: #2ecc71;">+$2,480</div></div></div></a>
+        
+        <!-- 2. GOOGLE -->
+        <a href="https://www.google.com" target="_blank" class="card-link"><div class="card"><div class="card-top" style="color: #4285F4;">G</div><div class="card-bottom"><div class="title">GOOGLE</div><div class="value">Connected</div></div></div></a>
+        
+        <!-- 3. FACEBOOK (यहाँ अपना फेसबुक लिंक डाल सकते हैं) -->
+        <a href="https://www.facebook.com" target="_blank" class="card-link"><div class="card"><div class="card-top" style="color: #1877F2;">📘</div><div class="card-bottom"><div class="title">FACEBOOK</div><div class="value">Linked</div></div></div></a>
+        
+        <!-- 4. INSTAGRAM (यहाँ अपना इंस्टाग्राम लिंक डाल सकते हैं) -->
+        <a href="https://www.instagram.com" target="_blank" class="card-link"><div class="card"><div class="card-top" style="color: #E4405F;">📸</div><div class="card-bottom"><div class="title">INSTAGRAM</div><div class="value">Linked</div></div></div></a>
+        
+        <!-- 5. GITHUB (यहाँ अपना गिटहब लिंक डाल सकते हैं) -->
+        <a href="https://github.com" target="_blank" class="card-link"><div class="card"><div class="card-top" style="color: #ffffff;">🐙</div><div class="card-bottom"><div class="title">GITHUB</div><div class="value">Verified</div></div></div></a>
+        
+        <!-- 6. THREATS -->
+        <a href="#" class="card-link"><div class="card"><div class="card-top" style="color: #FF4D4D;">🛡️</div><div class="card-bottom"><div class="title">THREATS</div><div class="value">0 Blocked</div></div></div></a>
+        
+        <!-- 7. TWITTER / X -->
+        <a href="https://twitter.com" target="_blank" class="card-link"><div class="card"><div class="card-top" style="color: #ffffff;">𝕏</div><div class="card-bottom"><div class="title">TWITTER</div><div class="value">Followed</div></div></div></a>
+        
+        <!-- 8. WHATSAPP (यहाँ अपना व्हाट्सएप नंबर जोड़ सकते हैं जैसे https://wa.me/91आपका_नंबर) -->
+        <a href="https://wa.me" target="_blank" class="card-link"><div class="card"><div class="card-top" style="color: #25D366;">💬</div><div class="card-bottom"><div class="title">WHATSAPP</div><div class="value">Chat Now</div></div></div></a>
+        
+        <!-- 9. PORTFOLIO -->
+        <a href="#" class="card-link"><div class="card"><div class="card-top" style="color: #FFA500;">🌐</div><div class="card-bottom"><div class="title">PORTFOLIO</div><div class="value">Visit Site</div></div></div></a>
+        
+        <!-- 10. CONTACT (यहाँ अपनी ईमेल आईडी लिख सकते हैं जैसे mailto:apni@email.com) -->
+        <a href="mailto:your-email@gmail.com" class="card-link"><div class="card"><div class="card-top" style="color: #00FFFF;">📧</div><div class="card-bottom"><div class="title">CONTACT</div><div class="value">Send Mail</div></div></div></a>
 
-  <script src="//code.tidio.co/q08b1h5jntzru2q6adozdletxhmwfipo.js" async></script>
+        <!-- 11. AI CHAT -->
+        <a href="https://chat.openai.com/" target="_blank" class="card-link"><div class="card" style="border: 2px solid #a020f0;"><div class="card-top" style="color: #a020f0;">🤖</div><div class="card-bottom"><div class="title">AI CHAT</div><div class="value">Open ChatGPT</div></div></div></a>
+
+        <!-- 12. AI IMAGE GEN -->
+        <a href="https://www.bing.com/images/create" target="_blank" class="card-link"><div class="card" style="border: 2px solid #00c8ff;"><div class="card-top" style="color: #00c8ff;">🎨</div><div class="card-bottom"><div class="title">AI IMAGE GEN</div><div class="value">Create Images</div></div></div></a>
+    </div>
+
+    <!-- आपका Tidio लाइव चैट कोड यहाँ जुड़ा हुआ है -->
+    <script src="//code.tidio.co/q08b1h5jntzru2q6adozdletxhmwfipo.js" async></script>
 </body>
-</html>
+  </html>
